@@ -70,7 +70,7 @@ def render_image_playground_tab(multimodal_model_pro: GenerativeModel):
         tab1, tab2 = st.tabs(["Response", "Prompt"])
         generate_instructions_description = st.button("Generate instructions", key="generate_instructions_description")
         with tab1:
-            if generate_instructions_description and prompt: 
+            if generate_instructions_description and prompt:
                 with st.spinner("Generating instructions using Gemini..."):
                     response = get_gemini_pro_vision_response(multimodal_model_pro, [oven_screen_img, prompt])
                     st.markdown(response)
@@ -92,7 +92,7 @@ def render_image_playground_tab(multimodal_model_pro: GenerativeModel):
         tab1, tab2 = st.tabs(["Response", "Prompt"])
         er_diag_img_description = st.button("Generate documentation", key="er_diag_img_description")
         with tab1:
-            if er_diag_img_description and prompt: 
+            if er_diag_img_description and prompt:
                 with st.spinner("Generating..."):
                     response = get_gemini_pro_vision_response(multimodal_model_pro,[er_diag_img,prompt])
                     st.markdown(response)

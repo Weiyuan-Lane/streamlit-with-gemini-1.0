@@ -13,7 +13,7 @@ from vertexai.preview.generative_models import (
 def load_models(gcp_project_id, gcp_location):
   vertexai.init(project=gcp_project_id, location=gcp_location)
   text_model_pro = GenerativeModel("gemini-pro")
-  multimodal_model_pro = GenerativeModel("gemini-pro-vision")
+  multimodal_model_pro = GenerativeModel("gemini-1.5-flash-001")
   return text_model_pro, multimodal_model_pro
 
 def get_gemini_pro_text_response( model: GenerativeModel,
